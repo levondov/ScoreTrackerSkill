@@ -1,0 +1,50 @@
+Score Tracker is a simple skill that keeps track of scores for people. A current list of all players and scores is always displayed on the skill card for most utterances/calls to the skill.
+
+Scores will be remembered until reset by the user. Players will also be remembered until reset by the user. There is no need to add players. If a person does not exist when assigning points the skill will make a new entry for them.
+
+A current list of all players and scores is always displayed on the skill card for most utterances/calls to the skill.
+
+Some features and sample utterances:
+
+* add a score for a player
+ex: 'ask score tracker to add 5 points for John'
+ex: 'ask score tracker to give 5 points to Dave'
+ex: 'ask score tracker 5 to Sarah'
+
+* Get the score for a single player
+ex: 'ask score tracker how many points does Sarah have'
+ex: 'ask score tracker what's the score for Dave'
+
+* Get the score for everyone/See who is winning
+ex: 'ask score tracker how many points everyone has'
+ex: 'ask score tracker who is winning'
+ex: 'ask score tracker for the score'
+
+* subtract a score for a player
+ex: 'ask score tracker to remove 5 points from Dave'
+
+* Remove a player from the tracker
+ex: 'ask score tracker to remove John'
+ex: 'ask score tracker to remove Sarah from the game'
+
+* Reset the score for a single player
+ex: 'ask score tracker to reset the score for Dave'
+
+* Reset the score for everyone
+ex: 'ask score tracaker to reset the game'
+ex: 'ask score tracker to start a new round'
+ex: 'ask score tracker for a new game'
+
+* Remove all players from the tracker
+ex: 'ask score tracker to remove everyone'
+ex: 'ask score tracker to remove all players'
+ex: 'ask score tracker to remove everyone from the game'
+
+Note that uncommon names may sometimes be misunderstood by Alexa. This ends up resulting in a mispelled name being tracked.
+
+If you run into any problems or bugs please report them or leave a comment/rating. I will try my best to fix all issues that pop up.
+
+Thanks for using this skill!
+
+
+

@@ -1,21 +1,4 @@
 from skill_functions import *
-
-def lambda_handler(event, context):
-    # TODO implement
-    dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
-    table = dynamodb.Table('ScoreKeeperDB')
-    if 0:
-        table.put_item(
-            Item={
-                'userid': 'levontest',
-                'teams': 5,
-            })
-    r = table.get_item(
-        Key = {
-            'userid': 'levontest'
-        })
-    print r
-    return 'Hello from Lambda'
     
 # --------------- Events ------------------
 
@@ -57,6 +40,22 @@ def on_intent(intent_request, session):
     # Dispatch to your skill's intent handlers
     if intent_name == "AddScoreIntent":
         return get_addscore_session(intent, session)
+    elif intent_name == "SubtractScoreIntent":
+        return get_subtractscore_session(intent,session)
+    elif intent_name == "ChangeScoreIntent":
+        return get_changescore_session(intent,session)
+    elif intent_name == "RemovePlayerIntent":
+        return remove_player_session(intent,session)
+    elif intent_name == "ResetPlayerIntent":
+        return reset_player_session(intent,session)
+    elif intent_name == "ResetGameIntent":
+        return startnew_session(intent,session)
+    elif intent_name == "RemoveAllPlayersIntent":
+        return remove_allplayers_session(intent,session)
+    elif intent_name == "GetPlayerScoreIntent":
+        return get_playerscore_intent(intent,session)
+    elif intent_name == "GetPlayersScoreIntent":
+        return get_playersscore_intent(intent,session)
     elif intent_name == "AMAZON.HelpIntent":
         return get_welcome_response()
     elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent":
