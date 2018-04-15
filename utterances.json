@@ -1,0 +1,154 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "score tracker",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AddScoreIntent",
+                    "slots": [
+                        {
+                            "name": "player",
+                            "type": "AMAZON.US_FIRST_NAME"
+                        },
+                        {
+                            "name": "value",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "to give {value} points to {player}",
+                        "{value} to {player}",
+                        "{value} points for {player}",
+                        "to add {value} points to {player}",
+                        "to add {value} points for {player}"
+                    ]
+                },
+                {
+                    "name": "ChangeScoreIntent",
+                    "slots": [
+                        {
+                            "name": "player",
+                            "type": "AMAZON.US_FIRST_NAME"
+                        },
+                        {
+                            "name": "value",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "change {player} score to {value} points",
+                        "set {player} score to {value} points",
+                        "set {player} points to {value}",
+                        "set {player} score to {value}",
+                        "change {player} score to {value}"
+                    ]
+                },
+                {
+                    "name": "SubtractScoreIntent",
+                    "slots": [
+                        {
+                            "name": "player",
+                            "type": "AMAZON.US_FIRST_NAME"
+                        },
+                        {
+                            "name": "value",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "remove {value} points from {player}",
+                        "take away {value} points from {player}",
+                        "subtract {value} points from {player}"
+                    ]
+                },
+                {
+                    "name": "RemovePlayerIntent",
+                    "slots": [
+                        {
+                            "name": "player",
+                            "type": "AMAZON.US_FIRST_NAME"
+                        }
+                    ],
+                    "samples": [
+                        "eliminate {player}",
+                        "take {player} out",
+                        "remove {player}",
+                        "remove {player} from the game"
+                    ]
+                },
+                {
+                    "name": "ResetPlayerIntent",
+                    "slots": [
+                        {
+                            "name": "player",
+                            "type": "AMAZON.US_FIRST_NAME"
+                        }
+                    ],
+                    "samples": [
+                        "reset the score for {player}"
+                    ]
+                },
+                {
+                    "name": "ResetGameIntent",
+                    "slots": [],
+                    "samples": [
+                        "reset the game",
+                        "reset the scores",
+                        "a new game",
+                        "start a new round",
+                        "start a new game",
+                        "restart the game"
+                    ]
+                },
+                {
+                    "name": "RemoveAllPlayersIntent",
+                    "slots": [],
+                    "samples": [
+                        "remove everyone",
+                        "remove everyone from the game",
+                        "remove all players from the game",
+                        "remove all players"
+                    ]
+                },
+                {
+                    "name": "GetPlayerScoreIntent",
+                    "slots": [
+                        {
+                            "name": "player",
+                            "type": "AMAZON.US_FIRST_NAME"
+                        }
+                    ],
+                    "samples": [
+                        "what's the score for {player}",
+                        "how many points does {player} have"
+                    ]
+                },
+                {
+                    "name": "GetPlayersScoreIntent",
+                    "slots": [],
+                    "samples": [
+                        "how many points everyone has",
+                        "who has the most points",
+                        "who is winning",
+                        "for the score",
+                        "how many points does everyone have",
+                        "for everyone's score"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
